@@ -2,7 +2,6 @@ import React from 'react';
 import { Component } from 'react';
 import mapValues from 'lodash.mapvalues';
 
-// Ensure Promise is available
 require('es6-promise').polyfill();
 
 import Loader from './loader';
@@ -54,45 +53,6 @@ export default class ExtendEditor extends Component {
             }
           });
         });
-
-        // editor.on('didLoadWebtask', (data) => {
-        //   this.setState({
-        //     loading: false,
-        //     styles: {
-        //       height: '100%'
-        //     }
-        //   });
-
-        //   if (typeof userHandlers['didLoadWebtask'] === 'function') {
-        //     userHandlers['didLoadWebtask'](data);
-        //   }
-        // });
-
-        // editor.on('didLoad', (data) => {
-        //   this.setState({
-        //     loading: false,
-        //     styles: {
-        //       height: '100%'
-        //     }
-        //   });
-
-        //   if (typeof userHandlers['didLoad'] === 'function') {
-        //     userHandlers['didLoad'](data);
-        //   }
-        // });
-
-        // editor.on('error', (data) => {
-        //   this.setState({
-        //     loading: false,
-        //     styles: {
-        //       height: '100%'
-        //     }
-        //   });
-
-        //   if (typeof userHandlers['error'] === 'function') {
-        //     userHandlers['error'](data);
-        //   }
-        // });
       });
   }
 
