@@ -4,7 +4,7 @@ import mapValues from 'lodash.mapvalues';
 
 require('es6-promise').polyfill();
 
-import Loader from './loader';
+import Loader from './components/loader';
 import ScriptLoader from './helpers/scriptLoader';
 
 export default class ExtendEditor extends Component {

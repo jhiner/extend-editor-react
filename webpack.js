@@ -2,7 +2,6 @@ const path = require('path')
 
 module.exports = {
   entry: './src/index.js',
-  // entry: './dist/extend-editor-react.min.js',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		libraryTarget: 'commonjs2'
@@ -22,5 +21,12 @@ module.exports = {
 	},
 	externals: {
 		react: 'commonjs react'
-	}
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+      }
+    })
+  ]
 }

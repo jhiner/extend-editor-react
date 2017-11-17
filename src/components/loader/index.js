@@ -1,7 +1,9 @@
 import React from 'react';
 import { PureComponent } from 'react';
 
-require('./loader.css');
+if (process.env.NODE_ENV !== 'test') {
+  require('./styles.css');
+}
 
 export default class Loader extends PureComponent {
   isHeaderEnabled(onEnabled) {

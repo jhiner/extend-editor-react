@@ -1,12 +1,14 @@
 {
   "name": "extend-editor-react",
   "version": "1.0.0",
-  "description": "Extend Editor React component",
-  "main": "./dist/extend-editor-react.js",
+  "description": "Extend Editor for React",
+  "main": "./dist/extend-editor-react.min.js",
   "scripts": {
     "build": "npm run build-dev && npm run build-prod",
     "build-prod": "webpack -p --config webpack.js --output-filename extend-editor-react.min.js",
-    "build-dev": "webpack --config webpack.js --output-filename extend-editor-react.js"
+    "build-dev": "webpack --config webpack.js --output-filename extend-editor-react.js",
+    "prepublish": "npm run build-prod",
+    "test": "mocha test/ --compilers js:babel-core/register"
   },
   "author": "javier.centurion@auth0.com",
   "license": "MIT",
@@ -17,7 +19,12 @@
     "babel-preset-react": "6.23.0",
     "babel-preset-stage-0": "6.22.0",
     "css-loader": "^0.28.7",
-    "react": "^15.4.2",
+    "chai": "4.1.0",
+    "enzyme": "2.9.1",
+    "react-addons-test-utils": "15.6.0",
+    "mocha": "3.4.2",
+    "react": "15.4.2",
+    "react-dom": "15.4.2",
     "style-loader": "^0.19.0",
     "webpack": "2.5.0"
   },
