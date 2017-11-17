@@ -50,4 +50,6 @@ dev/*.css
 
 release
 
+dist/*.js
+
 dist
