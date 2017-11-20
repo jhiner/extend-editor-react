@@ -10,6 +10,7 @@ import ScriptLoader from './helpers/scriptLoader';
 export default class ExtendEditor extends Component {
   state = {
     loading: true,
+    settings: this.props.settings || {},
     styles: {
       height: '100%',
       display: 'none'
@@ -31,13 +32,13 @@ export default class ExtendEditor extends Component {
   }
 
   componentWillMount() {
-    ScriptLoader(this.props.libUrl || this.libUrl)
+    ScriptLoader.load(this.props.libUrl || this.libUrl)
       .then(() => {
         const editor = window.ExtendEditor;
         const userHandlers = this.props.on;
         const events = ['didLoadWebtask', 'didLoad', 'error'];
 
-        editor.create(this.editorContainer, this.props.settings);
+        editor.create(this.editorContainer, this.state.settings);
 
         mapValues(userHandlers, (handler, event) => {
           if (events.indexOf(event) === -1 && typeof handler === 'function') {
@@ -59,7 +60,7 @@ export default class ExtendEditor extends Component {
   render() {
     return (
       <div style={{ height: this.props.height || 450, width: this.props.width || '100%' }}>
-        { this.state.loading ? (<Loader settings={this.props.settings} />) : null }
+        { this.state.loading ? (<Loader settings={this.state.settings} />) : null }
 
         <div style={this.state.styles} ref={(c) => { this.editorContainer = c; }}></div>
       </div>

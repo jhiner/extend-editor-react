@@ -53,3 +53,5 @@ release
 dist/*.js
 
 dist
+
+.nyc_output/

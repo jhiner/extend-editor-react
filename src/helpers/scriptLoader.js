@@ -1,33 +1,35 @@
-module.exports = src => (
-  new Promise((resolve, reject) => {
-    let shouldLoad = true;
+module.exports = {
+  load: (src) => {
+    return new Promise((resolve, reject) => {
+      let shouldLoad = true;
 
-    for (let i = 0; i <= document.scripts.length; i++) {
-      if (document.scripts[i] && document.scripts[i].src.indexOf(src) !== -1) {
-        shouldLoad = false;
-        break;
+      for (let i = 0; i <= document.scripts.length; i++) {
+        if (document.scripts[i] && document.scripts[i].src.indexOf(src) !== -1) {
+          shouldLoad = false;
+          break;
+        }
       }
-    }
 
-    if (shouldLoad) {
-      const head   = document.getElementsByTagName('head')[0];
-      const script = document.createElement('script');
+      if (shouldLoad) {
+        const head   = document.getElementsByTagName('head')[0];
+        const script = document.createElement('script');
 
-      script.type  = 'text/javascript';
-      script.defer = true;
-      script.async = true;
-      script.src   = src;
+        script.type  = 'text/javascript';
+        script.defer = true;
+        script.async = true;
+        script.src   = src;
 
-      script.onload = () => {
+        script.onload = () => {
+          resolve();
+        };
+
+        script.onerror = () => {
+          reject();
+        };
+        head.appendChild(script);
+      } else {
         resolve();
-      };
-
-      script.onerror = () => {
-        reject();
-      };
-      head.appendChild(script);
-    } else {
-      resolve();
-    }
-  })
-);
+      }
+    })
+  }
+};
