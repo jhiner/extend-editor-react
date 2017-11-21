@@ -7,14 +7,17 @@
 [license-image]: http://img.shields.io/npm/l/auth0-lock.svg?style=flat-square
 [license-url]: #license
 
-## Extend Editor - React Component
+# Extend Editor for React
 
-### Sample
+**Extend Editor** can be integrated into your product to provide your users with a first-class, web-based development experience for extensions.
+
+![](https://camo.githubusercontent.com/e359a3721463fafdd3380ef1477533fa0a0ab1d2/68747470733a2f2f63646e2e61757468302e636f6d2f626c6f672f657874656e642d776562686f6f6b732f73657474696e67732d656469742d636f64652e706e67)
+
+It can be customized to provide your users with the most streamlined, built-in experience with just a few lines of code:
 
 ```javascript
 import React from 'react';
 import { Component } from 'react';
-
 import ExtendEditor from 'extend-editor-react';
 
 export default class MyApp extends Component {
@@ -34,7 +37,90 @@ export default class MyApp extends Component {
 }
 ```
 
-## What is [Auth0 Extend](https://auth0.com/extend/)?
+## Install
+
+From [npm](https://npmjs.org)
+
+```sh
+npm install extend-editor-react
+```
+
+## Usage
+### Props
+
+| Name  | Type | Description | Default |
+| ------------- | ------------- |-------------|-------------|
+| settings  | Object  | Extend Editor configuration object. For more info click [here](https://auth0.com/extend/docs/libraries/extend-editor#configuring-extend-editor). | - |
+| libUrl | Integer | The Url to the Extend Editor library. | `https://cdn.auth0.com/auth0-extend/1/extend-editor.js` |
+| on | Object | The handler for the Extend Editor events like `didWebtaskLoad`. | - |
+| height | Integer | The heigh of the Extend Editor. | `450px` |
+| width | Integer | The width of the Extend Editor. | `100%` |
+
+### Examples
+
+#### Customizing the Editor
+
+```javascript
+import React from 'react';
+import { Component } from 'react';
+import ExtendEditor from 'extend-editor-react';
+
+export default class MyApp extends Component {
+  render() {
+    return (
+      <div>
+        <h1>My App</h1>
+        <ExtendEditor
+          settings= {{
+            token: 'ey...',
+            webtaskName: 'empty-function',
+            theme: 'light',
+            allowSwitching: false
+          }}
+          height={500}
+        />
+      </div>
+    );
+  }
+}
+```
+
+**Note**: For more information about settings click [here](https://auth0.com/extend/docs/libraries/extend-editor#configuring-extend-editor).
+
+#### Attaching to events
+
+```javascript
+import React from 'react';
+import { Component } from 'react';
+import ExtendEditor from 'extend-editor-react';
+
+export default class MyApp extends Component {
+  onEditorDidSaveWebtask(data) {
+    console.log(data);
+  }
+
+  onEditorError(data) {
+    console.log(data);
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>My App</h1>
+        <ExtendEditor
+          on={{
+            didSaveWebtask: this.onEditorDidSaveWebtask,
+            error: this.onEditorError
+          }}
+        />
+      </div>
+    );
+  }
+}
+```
+
+
+## What is Auth0 Extend?
 
 We believe SaaS products should be easily extensible from within your product without deploying or maintaining servers. We make it easy for your customers, sales engineers, and partners to quickly extend your SaaS. We developed an Extensibility As A Service platform that accelerates time to value, it is called Auth0 Extend.
 
