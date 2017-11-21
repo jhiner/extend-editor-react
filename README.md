@@ -39,7 +39,7 @@ export default class MyApp extends Component {
 
 ## Install
 
-From [npm](https://npmjs.org)
+From [npm](https://npmjs.org):
 
 ```sh
 npm install extend-editor-react
