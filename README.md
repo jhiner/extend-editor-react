@@ -1,3 +1,5 @@
+[![Auth0 Extend](https://cdn.auth0.com/auth0-extend/badges/extend-3.svg)](https://auth0.com/extend) [![Auth0 Extend Docs](https://cdn.auth0.com/auth0-extend/badges/extend-docs-3.svg)](https://auth0.com/extend/docs)
+
 ## Extend Editor - React Component
 
 ### Sample
