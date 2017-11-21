@@ -1,4 +1,11 @@
-[![Auth0 Extend](https://cdn.auth0.com/auth0-extend/badges/extend-3.svg)](https://auth0.com/extend) [![Auth0 Extend Docs](https://cdn.auth0.com/auth0-extend/badges/extend-docs-3.svg)](https://auth0.com/extend/docs)
+[![Auth0 Extend][auth0-extend-image]][auth0-extend-url] [![Auth0 Extend Docs][extend-docs-image]][extend-docs-url] [![License][license-image]][license-url]
+
+[auth0-extend-image]:https://cdn.auth0.com/auth0-extend/badges/extend-final.svg
+[auth0-extend-url]: https://auth0.com/extend
+[extend-docs-image]:https://cdn.auth0.com/auth0-extend/badges/extend-docs-final.svg
+[extend-docs-url]: https://auth0.com/extend/docs
+[license-image]: http://img.shields.io/npm/l/auth0-lock.svg?style=flat-square
+[license-url]: #license
 
 ## Extend Editor - React Component
 
