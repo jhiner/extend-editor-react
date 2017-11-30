@@ -27,6 +27,7 @@ export default class MyApp extends Component {
         <h1>My App</h1>
         <ExtendEditor
           settings={{
+            hostUrl: 'your-auth0-extend-deployment-url',
             token: 'ey...',
             webtaskName: 'empty-function'
           }}
@@ -72,6 +73,7 @@ export default class MyApp extends Component {
         <h1>My App</h1>
         <ExtendEditor
           settings= {{
+            hostUrl: 'your-auth0-extend-deployment-url',
             token: 'ey...',
             webtaskName: 'empty-function',
             theme: 'light',
@@ -108,6 +110,10 @@ export default class MyApp extends Component {
       <div>
         <h1>My App</h1>
         <ExtendEditor
+          settings= {{
+            hostUrl: 'your-auth0-extend-deployment-url',
+            token: 'ey...'
+          }}
           on={{
             didSaveWebtask: this.onEditorDidSaveWebtask,
             error: this.onEditorError
