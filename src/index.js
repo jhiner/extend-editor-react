@@ -35,7 +35,7 @@ export default class ExtendEditor extends Component {
     ScriptLoader.load(this.props.libUrl || this.libUrl)
       .then(() => {
         const editor = window.ExtendEditor;
-        const userHandlers = this.props.on;
+        const userHandlers = this.props.on || {};
         const events = ['didLoadWebtask', 'didLoad', 'error'];
 
         editor.create(this.editorContainer, this.state.settings);

@@ -6,10 +6,14 @@ if (process.env.NODE_ENV !== 'test') {
 }
 
 export default class Loader extends PureComponent {
+  state = {
+    settings: this.props.settings
+  }
+
   isHeaderEnabled(onEnabled) {
-    const headerOptions = typeof this.props.settings.header === 'undefined' ?
+    const headerOptions = typeof this.state.settings.header === 'undefined' ?
                                  { enabled: false } :
-                                 this.props.settings.header;
+                                 this.state.settings.header;
 
     if (headerOptions === false) {
       return null;
@@ -29,7 +33,7 @@ export default class Loader extends PureComponent {
 
   render() {
     return (
-        <div className={`wt-workbench ${this.props.settings.theme === 'light' ? 'wt-theme-light' : ''}`}>
+        <div className={`wt-workbench ${this.state.settings.theme === 'light' ? 'wt-theme-light' : ''}`}>
         { this.isHeaderEnabled(opts => (
           <div className="wt-header">
             { opts.logoUrl && opts.logoUrl.length > 0 ? (
