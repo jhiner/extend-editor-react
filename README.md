@@ -43,7 +43,7 @@ export default class MyApp extends Component {
 From [npm](https://npmjs.org):
 
 ```sh
-npm install extend-editor-react
+npm install @auth0extend/extend-editor-react --save
 ```
 
 ## Usage
