@@ -1,5 +1,5 @@
 {
-  "name": "extend-editor-react",
+  "name": "@auth0extend/extend-editor-react",
   "version": "0.8.0",
   "description": "Extend Editor for React",
   "main": "./dist/extend-editor-react.min.js",
@@ -12,6 +12,14 @@
     "watch": "mocha test/ --compilers js:babel-core/register --watch",
     "coverage": "nyc --reporter=html mocha test/ --compilers js:babel-core/register && open ./coverage/index.html"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/auth0/extend-editor-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/auth0/extend-editor-react/issues"
+  },
+  "homepage": "https://github.com/auth0/extend-editor-react#readme",
   "author": "javier.centurion@auth0.com",
   "license": "MIT",
   "devDependencies": {

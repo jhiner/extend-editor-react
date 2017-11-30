@@ -1,6 +1,6 @@
 # Change Log
 
-## [v1.0.0](https://github.com/auth0/extend-editor-react/tree/v1.0.0) (2017-11-21)
+## [v0.8.0](https://github.com/auth0/extend-editor-react/tree/v1.0.0) (2017-11-30)
 
 **Added**
 
