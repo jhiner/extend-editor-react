@@ -18,7 +18,7 @@ It can be customized to provide your users with the most streamlined, built-in e
 ```javascript
 import React from 'react';
 import { Component } from 'react';
-import ExtendEditor from 'extend-editor-react';
+import ExtendEditor from '@auth0extend/extend-editor-react';
 
 export default class MyApp extends Component {
   render() {
@@ -64,7 +64,7 @@ npm install @auth0extend/extend-editor-react --save
 ```javascript
 import React from 'react';
 import { Component } from 'react';
-import ExtendEditor from 'extend-editor-react';
+import ExtendEditor from '@auth0extend/extend-editor-react';
 
 export default class MyApp extends Component {
   render() {
@@ -94,7 +94,7 @@ export default class MyApp extends Component {
 ```javascript
 import React from 'react';
 import { Component } from 'react';
-import ExtendEditor from 'extend-editor-react';
+import ExtendEditor from '@auth0extend/extend-editor-react';
 
 export default class MyApp extends Component {
   onEditorDidSaveWebtask(data) {
