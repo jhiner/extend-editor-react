@@ -125,6 +125,32 @@ export default class MyApp extends Component {
 }
 ```
 
+#### Checking if editor is `dirty`
+
+```javascript
+import React from 'react';
+import { Component } from 'react';
+import ExtendEditor from '@auth0extend/extend-editor-react';
+
+export default class MyApp extends Component {
+  render() {
+    return (
+      <div>
+        <h1>My App</h1>
+        <ExtendEditor
+           ref={(c) => { this.ExtendEditor = c; }}
+          settings= {{
+            hostUrl: 'your-auth0-extend-deployment-url',
+            token: 'ey...'
+          }}
+        />
+
+        <button onClick={() => { console.log(this.ExtendEditor.isDirty()); }}>isDirty</button>
+      </div>
+    );
+  }
+}
+```
 
 ## What is Auth0 Extend?
 

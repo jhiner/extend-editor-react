@@ -31,6 +31,10 @@ export default class ExtendEditor extends Component {
     });
   }
 
+  isDirty = () => {
+    return window.ExtendEditor.isDirty();
+  };
+
   componentWillMount() {
     ScriptLoader.load(this.props.libUrl || this.libUrl)
       .then(() => {
