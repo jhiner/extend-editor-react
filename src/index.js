@@ -17,7 +17,7 @@ export default class ExtendEditor extends Component {
     }
   }
 
-  libUrl = 'https://cdn.auth0.com/auth0-extend/1/extend-editor.js';
+  libUrl = 'https://cdn.auth0.com/auth0-extend/2/extend-editor.js';
 
   registerEvent(editor, events, userHandlers, cb) {
     events.forEach((event) => {

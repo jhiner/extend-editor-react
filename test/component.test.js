@@ -21,7 +21,7 @@ describe('<ExtendEditor />', () => {
 
   it('Should render with default settings', () => {
     // Arrange
-    const defaultLibUrl = 'https://cdn.auth0.com/auth0-extend/1/extend-editor.js';
+    const defaultLibUrl = 'https://cdn.auth0.com/auth0-extend/2/extend-editor.js';
     const Editor = {
       create: () => { },
       on: () => { }
