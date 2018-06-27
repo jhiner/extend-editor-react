@@ -50,8 +50,8 @@ dev/*.css
 
 release
 
-dist/*.js
+# dist/*.js
 
-dist
+# dist
 
 .nyc_output/
